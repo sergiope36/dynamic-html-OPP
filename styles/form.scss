@@ -1,0 +1,52 @@
+@import 'common';
+
+$size:1450px;
+@mixin size {
+    @media screen and (max-width: #{$size}){
+        @content;
+    }
+}
+
+.add-film {
+    width: 50%;
+    margin: auto;
+    @include display-flex(flex, "" , center, center);
+    padding: 100px 0px;
+    @include size {
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    .form {
+        width: 80%;
+        padding: 50px;
+        border: 1px solid var(--brand-color);
+        box-shadow: 10px 10px 5px -1px var(--brand-color);
+        @include size {
+            width: 85%;
+        }
+        input {
+            font-size: 1.5rem;
+            text-align: left;
+            padding-left: 10px;  
+        } 
+        label {
+                padding-top:15px;
+                margin-bottom: -50px;
+            }   
+        input[type=text],
+        input[type=url],
+        input[type=number]{
+            width: 100%;
+            padding: 10px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }     
+    }
+
+}
+
+
+

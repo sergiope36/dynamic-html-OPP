@@ -1,0 +1,48 @@
+.film-description {
+  width: 50%;
+  margin: 100px auto;
+  padding-top: 50px;
+  border-top: 3px solid var(--brand-color); }
+  @media screen and (max-width: 1200px) {
+    .film-description {
+      width: 95%; } }
+
+.film-description > .film {
+  width: 80%;
+  margin: auto; }
+  .film-description > .film .film-header {
+    display: grid;
+    height: 100px;
+    grid-template-columns: 1fr 5fr;
+    row-gap: 10px;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    padding: 50px 0px;
+    grid-template-areas: "ranking title" "ranking year"; }
+    .film-description > .film .film-header .ranking {
+      grid-area: ranking;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 20px;
+      text-align: center;
+      background-color: var(--brand-color); }
+      .film-description > .film .film-header .ranking h1 {
+        color: white; }
+    .film-description > .film .film-header .title {
+      grid-area: title; }
+    .film-description > .film .film-header .year {
+      grid-area: year; }
+      .film-description > .film .film-header .year p {
+        margin-top: -20px !important;
+        font-size: 1.4rem;
+        font-style: italic;
+        color: grey; }
+  .film-description > .film .film-img {
+    padding: 50px 0px; }
+    .film-description > .film .film-img img {
+      padding-bottom: 30px;
+      border-bottom: 1px solid grey;
+      height: 400px;
+      width: 100%; }

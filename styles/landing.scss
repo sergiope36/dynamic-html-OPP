@@ -1,0 +1,61 @@
+$size: 920px;
+
+@mixin size {
+    @media screen and (max-width: #{$size}){
+        @content;
+    }
+}
+
+$size2:1300px;
+@mixin size2 {
+    @media screen and (max-width: #{$size2}){
+        @content;
+    }
+}
+
+.img-header {
+    margin: auto;
+    width: 80%;
+    height: 600px;
+    margin:auto;
+    @include size {
+        display: none;
+    }
+}
+
+.carousel {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    img {
+        width: 100% !important;   
+        height: 600px !important;
+    }
+    .carousel-inner {
+    height: 600px !important;
+    }
+    .information {
+        background-color: black; 
+        opacity: 0.9;
+        position: absolute;
+        z-index: 0;
+        width: 30%;
+        height: 100%;
+        margin-bottom: 0 !important;
+        left: 0; 
+        bottom: 0;  
+        text-align: left;
+        @include size2 {
+            width: 40%;
+        }
+        .carousel-text {
+            padding:35px; 
+            h3 {
+                color: var(--brand-color); 
+                font-weight: bold;
+            } 
+            
+         }
+    }
+}

@@ -1,0 +1,80 @@
+$size:1200px;
+@mixin size {
+    @media screen and (max-width: #{$size}){
+        @content;
+    }
+}
+
+.film-description {
+    width: 50%;
+    margin: 100px auto;
+    padding-top: 50px;
+    border-top: 3px solid var(--brand-color);   
+    align-items: center;
+    @include size {
+        width: 100%;
+    }
+}
+
+.film-description >.film {
+    width: 100%;
+    margin: auto;
+    .film-header {
+        display:grid;
+        height: 80px;
+        grid-template-columns: 1fr 6fr;
+        row-gap: 10px;
+        column-gap: 30px;
+        grid-template-areas:  
+        "ranking title"
+        "ranking year";
+        .ranking {
+        grid-area: ranking;
+        background-color: var(--brand-color);
+        align-items: center;
+        padding-top: 20px;        
+        text-align: center;
+            h1 {
+                color: white;
+            }
+        }
+        .title {
+            grid-area: title;
+        }
+        .year {
+            grid-area:year;
+            p{
+                margin-top: -20px !important;
+                font-size: 1.4rem;
+                font-style: italic;
+                color: grey;
+            }
+        }
+    }
+
+    .information {
+        grid-template-rows: 1fr 2fr !important;
+        row-gap: 0px;
+        
+        grid-template-areas:  
+        "img description"; 
+        .film-img {
+            grid-area:img;           
+            padding-top:50px;
+            width: 50%;
+            img {
+                padding-bottom: 30px;
+                border-bottom: 1px solid grey;
+                width: 50%;
+                height: 300px;
+            }
+        }
+        .description {
+            grid-area:description;
+            width: 50%
+        }
+    }
+    
+}
+
+

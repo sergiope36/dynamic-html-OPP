@@ -1,0 +1,25 @@
+.movies {
+    width: 80%;
+    margin: auto;
+    padding: 100px 0px;
+    .card { 
+        border: none;
+        transition: transform 0.9s;
+        &:hover {
+            transform: scale(1.06); 
+        }         
+        img {
+            border: 1px solid black;
+            border-radius: 5px;  
+            height: 140px;
+            width: 100%;      
+        }
+        .text {
+            font-size: 0.95rem;
+            margin-top: -25px;
+            color: rgba(62,180,149,1);
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

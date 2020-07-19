@@ -1,0 +1,24 @@
+.movies {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0px; }
+  .movies .card {
+    border: none;
+    -webkit-transition: -webkit-transform 0.9s;
+    transition: -webkit-transform 0.9s;
+    transition: transform 0.9s;
+    transition: transform 0.9s, -webkit-transform 0.9s; }
+    .movies .card:hover {
+      -webkit-transform: scale(1.06);
+      transform: scale(1.06); }
+    .movies .card img {
+      border: 1px solid black;
+      border-radius: 5px;
+      height: 140px;
+      width: 100%; }
+    .movies .card .text {
+      font-size: 0.95rem;
+      margin-top: -25px;
+      color: #3eb495;
+      font-weight: bold;
+      text-align: center; }

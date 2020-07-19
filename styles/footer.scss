@@ -1,0 +1,31 @@
+@import 'common';
+
+footer {
+    background-color: black;
+    height: 250px;
+    .footer {
+        @include display-flex(flex, row ,"", center);
+        flex-wrap: wrap;
+        color: white;
+        font-size: 0.9rem;
+    }
+    .top-row {
+        border-bottom: 1px solid white;
+    }
+    .bottom-row {
+        @include display-flex(flex, "" , space-between, center);
+        padding-top:30px;  
+        .column-left {
+            width: 40% 
+        }
+
+        .column-center a {
+            text-decoration: none;
+            color:white !important; 
+            &:hover {
+                color:var(--brand-color) !important;
+                transition: 1s;
+            }   
+        }
+    }
+}
