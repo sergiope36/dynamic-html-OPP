@@ -99,8 +99,9 @@ $(function(){
 
     $('.film-description').append('<div class="film"></div>')
     addElements(collectionsImdb.movies)
-
-
+  
+    var newFilm
+   
     $( "#target" ).submit(function() {
         let title = $("#title").val();
         let releaseYear = $("#releaseYear").val();
@@ -117,7 +118,7 @@ $(function(){
         let producer = $("#producer").val();
         let distributor = $("#distributor").val();
 
-        const newFilm = new Movie(title, releaseYear, nationality, genre, photo)
+        let newFilm = new Movie(title, releaseYear, nationality, genre, photo)
         
         newFilm.actors = [actors];
         newFilm.director = director;
@@ -129,12 +130,16 @@ $(function(){
         newFilm.producer = producer;
         newFilm.distributor = distributor;
 
-        collectionsImdb.movies.push(newFilm)
-        console.log(collectionsImdb)
+        collectionsImdb.movies.push(newFilm);
+        let local = localStorage.setItem("key", JSON.stringify(newFilm));
 
-        addElements([newFilm])
-        console.log(newFilm)
+        return local;
+
     });
-   
+
+        newFilm = JSON.parse(localStorage.getItem("key"));
+    
+        addElements([newFilm])
+  
 })
 

@@ -39,8 +39,7 @@ const addElements = (movie) => {
     for(let i=0; i<movie.length; i++) {
         
         $('.film').append(`<div class="film-header"><div class="ranking"><h1>${i+1}</h1></div><div class="title"><h1>${movie[i].name}</h1></div><div class="year"><p>${movie[i].age} years old</p></div></div>`);
-        $('.film').append(`<div class="information"><div class="film-img"><img src="${movie[i].photo}"></div></div>`);
-        $('.film').append(`<div class="information"><div class="description"><p><span style="font-weight:bold">Nationality</span>: ${movie[i].nationality}</p><p><span style="font-weight:bold">Oscars won</span>: ${movie[i].oscarNumbers}</p><p><span style="font-weight:bold">Profession</span>: ${movie[i].profession}</p></div></div>`)
+        $('.film').append(`<div class="information row"><div class="film-img col-6 col-md-4"><img src="${movie[i].photo}"></div><div class="description col-6 col-md-8"><p><span style="font-weight:bold">Nationality</span>: ${movie[i].nationality}</p><p><span style="font-weight:bold">Oscars won</span>: ${movie[i].oscarNumbers}</p><p><span style="font-weight:bold">Profession</span>: ${movie[i].profession}</p></div></div>`);
     }
 }
 

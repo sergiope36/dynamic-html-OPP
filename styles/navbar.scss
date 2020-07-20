@@ -1,5 +1,19 @@
 @import 'common';
 
+$size:900px;
+@mixin size {
+    @media screen and (max-width: #{$size}){
+        @content;
+    }
+}
+
+$size2:850px;
+@mixin size2 {
+    @media screen and (max-width: #{$size2}){
+        @content;
+    }
+}
+
 .nav-bar {
     right: 0;
     left: 0;
@@ -10,10 +24,13 @@
     border-bottom: 1px solid grey;
     box-shadow: 0px 3px 5px -4px grey;  
     width: 80%; 
+    @include size {
+        width: 95%;
+    }
     .logo {
         img {
-            height:50px;
-            margin-right: 40px
+            height:45px;
+        
         }
     }
     .tabs {
@@ -22,6 +39,9 @@
     
     .browser {
         right: 0;
-        margin-left: 50px
+        margin-left: 50px;
+        @include size2 {
+            display:none;
+        }        
     } 
 }

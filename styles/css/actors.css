@@ -8,7 +8,7 @@
   align-items: center; }
   @media screen and (max-width: 1200px) {
     .film-description {
-      width: 100%; } }
+      width: 80%; } }
 
 .film-description > .film {
   width: 100%;
@@ -42,18 +42,7 @@
         font-style: italic;
         color: grey; }
   .film-description > .film .information {
-    grid-template-rows: 1fr 2fr !important;
-    row-gap: 0px;
-    grid-template-areas: "img description"; }
-    .film-description > .film .information .film-img {
-      grid-area: img;
-      padding-top: 50px;
-      width: 50%; }
-      .film-description > .film .information .film-img img {
-        padding-bottom: 30px;
-        border-bottom: 1px solid grey;
-        width: 50%;
-        height: 300px; }
-    .film-description > .film .information .description {
-      grid-area: description;
-      width: 50%; }
+    padding: 50px 0px; }
+    .film-description > .film .information .film-img img {
+      width: 100%;
+      height: 300px; }
