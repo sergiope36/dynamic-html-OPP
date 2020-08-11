@@ -2,7 +2,7 @@
 
 footer {
     background-color: black;
-
+    
     height: 250px;
     .footer {
         @include display-flex(flex, row ,"", center);
