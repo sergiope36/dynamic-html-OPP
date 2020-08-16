@@ -44,5 +44,9 @@
   .film-description > .film .information {
     padding: 50px 0px; }
     .film-description > .film .information .film-img img {
-      width: 100%;
-      height: 300px; }
+      width: 90%;
+      height: 250px; }
+      @media screen and (max-width: 1200px) {
+        .film-description > .film .information .film-img img {
+          width: 100%;
+          height: 280px; } }
